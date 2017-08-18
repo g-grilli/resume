@@ -1,12 +1,18 @@
 <!--Header-->
-<header class="container" id="maincontent" tabindex="-1">
+<header class="success" id="maincontent" tabindex="-1">
  <div class="row">
-  <div class="col-lg-12">
-   <img class="rounded-circle" src="static/img/mobile-phone-1875813_1920.jpg" alt="gene grilli" width="90%">
+  <div class="col-sm-12">
+   <div class="embed-responsive embed-responsive-16by9 headVideo">  
+    <video loop muted autoplay class="embed-responsive-item rounded-circle" poster="static/img/mobile-phone-1875813_1920.jpg">
+     <source src="static/img/earth-1236.webm" type="video/webm">
+     <source src="static/img/computer_5074.mp4" type="video/mp4">
+     <source src="static/img/earth-1236.ogg" type="video/ogg">
+    </video>
+   </div>
    <div class="intro-text">
     <h1 class="name">Gene Grilli</h1>
      <hr class="star-light">
-     <span class="skills">Full Stack Developer</span>
+     <span class="skills">Full Stack Developer</span><br>
    </div>
   </div>
  </div>
@@ -21,39 +27,44 @@
    </div>
   </div>
   <div class="row">
-   <div class="col-sm-4 portfolio-item">
-    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+   <div class="col-lg-4 portfolio-item">
+    <a href="#scorehoard" class="portfolio-link" data-toggle="modal">
      <div class="caption">
       <div class="caption-content">
-       <i class="fa fa-search-plus fa-3x"></i>
+       <i class="fa fa-search-plus fa-2x"></i>
+       <h5>ScoreHoard</h5>
       </div>
      </div>
-    <img src="/static/img/scorehoard.png" class="rounded" alt="ScoreHoard">
+    <img src="/static/img/scorehoardMain.png" class="img-fluid" alt="ScoreHoard">
     </a>
     </div>
-  <div class="col-sm-4 portfolio-item">
-   <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+  <div class="col-lg-4 portfolio-item">
+   <a href="#station" class="portfolio-link" data-toggle="modal">
    <div class="caption">
     <div class="caption-content">
-     <i class="fa fa-search-plus fa-3x"></i>
+     <i class="fa fa-search-plus fa-2x"></i>
+     <h5>Weather Station</h5>
     </div>
    </div>
-   <img src="/static/img/station.png" class="rounded" alt="Weather Station">
+   <img src="/static/img/stationMain.png" class="img-fluid" alt="Weather Station">
   </a>
  </div>
- <div class="col-sm-4 portfolio-item">
-   <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+ <div class="col-md-4 portfolio-item">
+   <a href="#ktrac" class="portfolio-link" data-toggle="modal">
    <div class="caption">
     <div class="caption-content">
-     <i class="fa fa-search-plus fa-3x"></i>
+     <i class="fa fa-search-plus fa-2x"></i>
+     <h5>K-Track</h5>
     </div>
     </div>
-     <img src="/static/img/ktrack.png" class="rounded" alt="K Track">
+     <img src="/static/img/ktracMain.png" class="img-fluid" alt="K Track">
    </a>
    </div>
   </div>
  </div>
 </section>
+
+
 <!-- About Section -->
 <section class="success" id="about">
  <div class="container">
@@ -66,38 +77,47 @@
  </div>
  <div class="container">
   <div class="row">
-   <div class="col-md-6 text-center">
+   <div class="col-sm-6 text-center">
     <p>Hello I'm a full stack developer based in Houston, Texas.
     <p>I have over 20 years experience in test and instrumentation.</p> 
     <p>A recent graduate of DigitalCrafts coding bootcamp, I have 
     a passion for coding. I am ready to help solve your next application!</p>
    </div>
-   <div class="col-md-6 text-center">
+   <div class="col-sm-2 text-center">
     <i class="devicon-html5-plain-wordmark"></i>
-    <i class="devicon-css3-plain-wordmark"></i>
-    <i class="devicon-javascript-plain"></i>
-    <i class="devicon-bootstrap-plain-wordmark"></i>
-    <i class="devicon-django-line-wordmark"></i>
     <i class="devicon-python-plain-wordmark"></i>
+    <i class="devicon-bootstrap-plain-wordmark"></i>
     <i class="devicon-postgresql-plain-wordmark"></i>
-    <i class="devicon-react-original-wordmark"></i>
-    <i class="devicon-nodejs-plain-wordmark"></i>
-    <i class="devicon-heroku-original-wordmark"></i>
-    <i class="devicon-nginx-original-wordmark"></i>
-    <i class="devicon-mocha-plain"></i>
-    <i class="devicon-jquery-plain-woodmark"></i>
-    <i class="devicon-debian-plain-wordmark"></i>
+    <i class="devicon-mysql-plain-wordmark"></i>
     <i class="devicon-amazonwebservices-original"></i>
+   </div>
+   <div class="col-sm-2 text-center">
+    <i class="devicon-css3-plain-wordmark"></i>
+    <i class="devicon-django-line-wordmark"></i>
+    <i class="devicon-sass-original"></i>
+    <i class="devicon-react-original-wordmark"></i>
+    <i class="devicon-debian-plain-wordmark"></i>
+    <i class="devicon-nginx-original-wordmark"></i>
+   </div>
+   <div class="col-sm-2 text-center">
+    <i class="devicon-javascript-plain"></i>
+    <i class="devicon-nodejs-plain-wordmark"></i>
+    <i class="devicon-jquery-plain-wordmark"></i>
+    <i class="devicon-heroku-original-wordmark"></i>
+    <i class="devicon-mocha-plain"></i>
+    <i class="devicon-wordpress-plain-wordmark"></i>
    </div>
   </div>
   <div class="row">
-   <div class="col-lg-8 col-lg-offset-2 text-center">
+   <div class="col-lg-12 text-center">
     <a href="img/g_grilli_resume.pdf" download='gene_grilli.pdf' class="btn btn-lg btn-outline">
     <i class="fa fa-download"></i> Download Resume</a>
    </div>
   </div>
  </div>
 </section>
+
+
 <!-- Contact Section -->
 <section id="contact">
  <div class="container">
@@ -107,7 +127,7 @@
     <hr class="star-primary">
    </div>
   </div>
-  <div class="row">
+<div class="row">
    <div class="col-lg-8 col-lg-offset-2">
     <form name="sentMessage" id="contactForm" novalidate>
      <div class="row control-group">
@@ -149,4 +169,246 @@
  </div>
 </div>
 </section>
+
+
+<!--Modals-->
+<div class="modal fade" id="scorehoard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">June 2017</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <h2>ScoreHoard</h2>
+       <hr class="star-primary">
+       <img src="static/img/scorehoardModal.png" class="img-fluid img-centered" alt="">
+       <h3>Application</h3>
+       <p>This ia a local weather station application that integrates a Raspberry PI with a 
+       temperature, humidity and barometric sensor module.
+       <h3>How it works</h3>
+       </p><p>The sensor suite is interfaced with Python to monitor the sensors and control a 
+       8x8 RGB LED matrix display. Python gets a reading every 15 minutes, converts the data from 
+       Celsius to Fahrenheit, and then records the data in a PostgreSQL database. Through the LED 
+       display, live temperature, humidity and barometric pressure are continually dispalyed.
+       </p>
+       <p>The Postgres database has two tables, one for storing the temperature, humidity and 
+       pressure sensor readings.  The second table stores a US Census zip code data base with longitude 
+       and latitude coordinates for each zipcode in the United States.</p>
+       <p>Using JavaScript on the front end, sensor data and geo cordinates can be accessed and displayed.  
+       The <a href="http://darksky.net">Dark Sky</a> weather API was added to provide US weather information independant 
+       of the local data.  Using the PostgreSQL zip code information cordinates are requested from the Dark Sky API. Zip Code weather 
+       can be changed through a user input that stores a cookie locally.</p>
+       <p>Local measurments are converted to JSON stringify format so the readings can displayed using Chart.js to see trends and history,
+       as well as the data in a table format.<p>
+       <p><strong>Weather Station</strong> is a multipage web app that reinforced the skills I learned while attending
+       <a href="http://digitalcrafts.com">DigitalCrafts</a> coding boot camp.<p>
+       <p><strong>Weather Station</strong> application takes advantage of the Raspberry PI hardware to host the web application 
+       locally behind a firewall through a <a href="https://www.dataplicity.com>">Dataplicity</a> connection utilizing Bind that monitors the local host.<p>
+       <h3>Tools</h3>                          <ul>
+       <ul>                          
+        <li>Python</li>
+        <li>Threading/li>
+        <li>Time</li>
+        <li>PostgreSQL</li>
+        <li>JavaScript</>
+        <li>Express</li>
+        <li>Express-Session</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+        <li>Apicache</li>
+        <li>Axios</li>
+        <li>Chart.js</li>
+        <li>HBS</ui>
+        <li>PG-Promise</li>
+       </ul>
+       <p>On this project I used... <a href="https://sellfy.com/p/8Q9P/jV3VZ/">GitHub</a>. If you'd like a peek under the hood.</p>
+       <ul class="list-inline item-details">
+        <li>Client:
+         <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+        </li>
+        <li>Date:
+         <strong><a href="http://startbootstrap.com">June 2017</a></strong>
+        </li>
+        <li>Service:
+         <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+        </li>
+       </ul>
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="station" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">August 2017</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <h2>Weather Station</h2>
+       <hr class="star-primary">
+       <img src="static/img/stationModal.png" class="img-fluid img-centered" alt="">
+       <h3>Application</h3>
+       <p>This ia a local weather station application that integrates a Raspberry PI with a 
+       temperature, humidity and barometric sensor module.
+       <h3>How it works</h3>
+       </p><p>The sensor suite is interfaced with Python to monitor the sensors and control a 
+       8x8 RGB LED matrix display. Python gets a reading every 15 minutes, converts the data from 
+       Celsius to Fahrenheit, and then records the data in a PostgreSQL database. Through the LED 
+       display, live temperature, humidity and barometric pressure are continually dispalyed.
+       </p>
+       <p>The Postgres database has two tables, one for storing the temperature, humidity and 
+       pressure sensor readings.  The second table stores a US Census zip code data base with longitude 
+       and latitude coordinates for each zipcode in the United States.</p>
+       <p>Using JavaScript on the front end, sensor data and geo cordinates can be accessed and displayed.  
+       The <a href="http://darksky.net">Dark Sky</a> weather API was added to provide US weather information independant 
+       of the local data.  Using the PostgreSQL zip code information cordinates are requested from the Dark Sky API. Zip Code weather 
+       can be changed through a user input that stores a cookie locally.</p>
+       <p>Local measurments are converted to JSON stringify format so the readings can displayed using Chart.js to see trends and history,
+       as well as the data in a table format.<p>
+       <p><strong>Weather Station</strong> is a multipage web app that reinforced the skills I learned while attending
+       <a href="http://digitalcrafts.com">DigitalCrafts</a> coding boot camp.<p>
+       <p><strong>Weather Station</strong> application takes advantage of the Raspberry PI hardware to host the web application 
+       locally behind a firewall through a <a href="https://www.dataplicity.com>">Dataplicity</a> connection utilizing Bind that monitors the local host.<p>
+       <h3>Tools</h3>                          <ul>
+       <ul>                          
+        <li>Python</li>
+        <li>Threading/li>
+        <li>Time</li>
+        <li>PostgreSQL</li>
+        <li>JavaScript</>
+        <li>Express</li>
+        <li>Express-Session</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+        <li>Apicache</li>
+        <li>Axios</li>
+        <li>Chart.js</li>
+        <li>HBS</ui>
+        <li>PG-Promise</li>
+       </ul>
+       <p>On this project I used... <a href="https://sellfy.com/p/8Q9P/jV3VZ/">GitHub</a>. If you'd like a peek under the hood.</p>
+       <ul class="list-inline item-details">
+        <li>Client:
+         <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+        </li>
+        <li>Date:
+         <strong><a href="http://startbootstrap.com">August 2017</a></strong>
+        </li>
+        <li>Service:
+         <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+        </li>
+       </ul>
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="ktrac" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">July 2017</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <h2>Kidney Track</h2>
+       <hr class="star-primary">
+       <img src="static/img/ktracModal.png" class="img-fluid img-centered" alt="">
+       <h3>Problem</h3>
+       <p>The first year after a kidney transplant requires a lot of monitoring, 
+       changes  and tracking.</p><p>Currently the transplant recipient leaves the hospital 
+       with a 3 inch ring binder which contains information on items such as medications, dosages, 
+       when to take them, and a schedule of doctor visits. A separate  section to track 
+       your daily weight weight and blood pressure reading.  A section on what to do if. 
+       A section on diet. Even a handy dandy section for a business card collection.  
+       </p><p>This book needs to be hauled around to various checkups and tests, but the information 
+       quickly changes as medications are added, dosages changed or just stopped altogether, 
+       clinic appointments and tests are added,  for the pack rat at heart this creates 
+       a daunting challenge and administrative PIB.</p>
+       <h3>Solution</h3> 
+       <p><strong>Kidney Track</strong> is a single page progressive web app that help's ease the administrative 
+       burden for the transplant family.<p>
+       <p><strong>Kidney Track</strong> takes advantage of the Firebase API to store user data which makes the information 
+       available on any web connected device the user selects.<p>
+       <h4>Tools</h4>
+       <ul>
+        <li>React</li>
+        <li>Redux</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Firebase</li>
+        <li>Material-ui</li>
+        <li>Moment</li>
+       </ul>
+       <p>On this project I used... <a href="https://sellfy.com/p/8Q9P/jV3VZ/">GitHub</a>. If you'd like a peek under the hood.</p>
+       <ul class="list-inline item-details">
+        <li>Client:
+         <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+        </li>
+        <li>Date:
+         <strong><a href="http://startbootstrap.com">July 2017</a></strong>
+        </li>
+        <li>Service:
+         <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+        </li>
+       </ul>
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="text-center">
+ <div class="footer-above">
+  <div class="container">
+   <div class="row">
+    <div class="footer-col col-md-4">
+     <h3>Location</h3>
+     <p>Houston, Texas</p>
+    </div>
+  <div class="footer-col col-md-4">
+    <h3>Around the Web</h3>
+      <a href="https://linkedin.com/in/genegrilli"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+      <a href="https://github.com/g-grilli"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+   </div>
+  <div class="footer-col col-md-4">
+   <h3>Gene Grilli</h3>
+   <p>A passion forcoding!</p>
+  </div>
+ </div>
+</div>
+</div>
+<div class="footer-below">
+ <div class="container">
+  <div class="row">
+   <div class="col-lg-12">
+    <h4>Copyright &copy; grilli.tech 2017</h4>
+   </div>
+  </div>
+</div>
+</div>
+</footer>
+
+
+
 
