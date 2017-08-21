@@ -35,9 +35,8 @@
        <h5>ScoreHoard</h5>
       </div>
      </div>
-    <img src="/static/img/scorehoardMain.png" class="img-fluid" alt="ScoreHoard">
-    </a>
-    </div>
+    <img src="/static/img/scorehoardMain.png" class="img-fluid" alt="ScoreHoard"></a>
+  </div>
   <div class="col-lg-4 portfolio-item">
    <a href="#station" class="portfolio-link" data-toggle="modal">
    <div class="caption">
@@ -49,7 +48,7 @@
    <img src="/static/img/stationMain.png" class="img-fluid" alt="Weather Station">
   </a>
  </div>
- <div class="col-md-4 portfolio-item">
+ <div class="col-lg-4 portfolio-item">
    <a href="#ktrac" class="portfolio-link" data-toggle="modal">
    <div class="caption">
     <div class="caption-content">
@@ -78,10 +77,18 @@
  <div class="container">
   <div class="row">
    <div class="col-sm-6 text-center">
-    <p>Hello I'm a full stack developer based in Houston, Texas.
-    <p>I have over 20 years experience in test and instrumentation.</p> 
-    <p>A recent graduate of DigitalCrafts coding bootcamp, I have 
-    a passion for coding. I am ready to help solve your next application!</p>
+    <p>I'm a full stack developer based in Houston, Texas. I studied electronics, 
+    pneumatics, and hydraulics while in the US Navy. I have over 20 years’ 
+    experience working with test and instrumentation, succeeding in various 
+    roles from service engineer to director of sales and marketing.
+    </p>
+    <p>With the help of freeCodeCamp, CodeAcademy and DigitalCrafts, I have 
+    transformed myself from just another sales engineer into a full-stack developer.
+    </p> 
+    <p> Learning software development has enabled me to apply my experience from 
+    my engineering and sales roles into the production of software tools that can 
+    be used by anyone.</p> 
+    <p>The possibilities are awesome!</p>
    </div>
    <div class="col-sm-2 text-center">
     <i class="devicon-html5-plain-wordmark"></i>
@@ -110,7 +117,7 @@
   </div>
   <div class="row">
    <div class="col-lg-12 text-center">
-    <a href="img/g_grilli_resume.pdf" download='gene_grilli.pdf' class="btn btn-lg btn-outline">
+    <a href="static/img/g_grilli_resume.pdf" download='gene_grilli.pdf' class="btn btn-lg btn-outline">
     <i class="fa fa-download"></i> Download Resume</a>
    </div>
   </div>
@@ -129,47 +136,54 @@
   </div>
 <div class="row">
    <div class="col-lg-8 col-lg-offset-2">
-    <form name="sentMessage" id="contactForm" novalidate>
+    <form id="gform" method="POST" class="pure-form pure-form-stacked"
+    action="https://script.google.com/macros/s/AKfycbysRRXUHPdVckcAala3roWPhGSfl2t7xcM5hCdSWXNkNOC2v_mA/exec">
+     <label class="sr-only">Keep this field blank</label>
+     <input id="honeypot" type="text" name="honeypot" value="" />
      <div class="row control-group">
-      <div class="form-group col-xs-12 floating-label-form-group controls">
-       <label for="name">Name</label>
-       <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-       <p class="help-block text-danger"></p>
+      <div class="form-group col-md-12 floating-label-form-group controls">
+       <label for="name">Name: </label>
+  <input id="name" name="name" placeholder="Name" />
       </div>
      </div>
      <div class="row control-group">
-     <div class="form-group col-xs-12 floating-label-form-group controls">
-      <label for="email">Email Address</label>
-      <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-      <p class="help-block text-danger"></p>
+     <div class="form-group col-md-12 floating-label-form-group controls">
+      <label for="email"><em>Your</em> Email Address:</label>
+      <input id="email" name="email" type="mail" value=""
+      required placeholder="Email Address"/>
+      <span id="email-invalid" style="display:none">
+        Must be a valid email address</span>
      </div>
     </div>
     <div class="row control-group">
-     <div class="form-group col-xs-12 floating-label-form-group controls">
-      <label for="phone">Phone Number</label>
-      <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-      <p class="help-block text-danger"></p>
+     <div class="form-group col-md-12 floating-label-form-group controls">
+       <label for="phone">Favourite Color: </label>
+      <input id="phone" name="phone" placeholder="Phone Number" />
+
      </div>
     </div>
     <div class="row control-group">
-     <div class="form-group col-xs-12 floating-label-form-group controls">
-      <label for="message">Message</label>
-      <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-      <p class="help-block text-danger"></p>
+     <div class="form-group col-md-12 floating-label-form-group controls">
+      <label for="message">Message: </label>
+      <textarea id="message" name="message" rows="5"
+      placeholder="Message"></textarea>
     </div>
    </div>
    <br>
    <div id="success"></div>
     <div class="row">
-     <div class="form-group col-xs-12">
-      <button type="submit" class="btn btn-success btn-lg">Send</button>
+     <div class="col-lg-12 text-center">
+      <button type="submit" class="btn btn-success btn-md"><i class="fa fa-paper-plane"></i>Send</button>
      </div>
     </div>
   </form>
  </div>
 </div>
+<div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting me!
+      I will get back to you soon.</h2>
+  </div>
 </section>
-
 
 <!--Modals-->
 <div class="modal fade" id="scorehoard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -186,61 +200,55 @@
        <hr class="star-primary">
        <img src="static/img/scorehoardModal.png" class="img-fluid img-centered" alt="">
        <h3>Application</h3>
-       <p>This ia a local weather station application that integrates a Raspberry PI with a 
-       temperature, humidity and barometric sensor module.
+       <p>Let ScoreHoard store your scoring data for you. Game makers can use the ScoreHoard API 
+       to avoid the hassles of database management. The ScoreHoard custom system allows direct 
+       access to style custom leaderboards and high scores table. 
+       Let your imagination take root in the ScoreHoard API to create special tracking dashboards.
        <h3>How it works</h3>
-       </p><p>The sensor suite is interfaced with Python to monitor the sensors and control a 
-       8x8 RGB LED matrix display. Python gets a reading every 15 minutes, converts the data from 
-       Celsius to Fahrenheit, and then records the data in a PostgreSQL database. Through the LED 
-       display, live temperature, humidity and barometric pressure are continually dispalyed.
+       <p>
+        ScoreHoard is a RESTful API that tracks scores for videogame makers. ScoreHoard allows 
+        gamemakers to send scores (and the usernames associated with the scores) directly 
+        into the ScoreHoard servers, quickly being integrated into our custom database. 
+        The ScoreHoard API allows you to receive your aggregate data in easily usable JSON. 
+        Features include: GET requests for retrieving leaderboards from our database, 
+        POST requests for adding gamescores into our database, user login and account 
+        creation system made from scratch with email validation for authentication, 
+        randomized and unique API key generation, and the ability to have 
+        scores tracked for multiple games through a single account.
        </p>
-       <p>The Postgres database has two tables, one for storing the temperature, humidity and 
-       pressure sensor readings.  The second table stores a US Census zip code data base with longitude 
-       and latitude coordinates for each zipcode in the United States.</p>
-       <p>Using JavaScript on the front end, sensor data and geo cordinates can be accessed and displayed.  
-       The <a href="http://darksky.net">Dark Sky</a> weather API was added to provide US weather information independant 
-       of the local data.  Using the PostgreSQL zip code information cordinates are requested from the Dark Sky API. Zip Code weather 
-       can be changed through a user input that stores a cookie locally.</p>
-       <p>Local measurments are converted to JSON stringify format so the readings can displayed using Chart.js to see trends and history,
-       as well as the data in a table format.<p>
-       <p><strong>Weather Station</strong> is a multipage web app that reinforced the skills I learned while attending
-       <a href="http://digitalcrafts.com">DigitalCrafts</a> coding boot camp.<p>
-       <p><strong>Weather Station</strong> application takes advantage of the Raspberry PI hardware to host the web application 
-       locally behind a firewall through a <a href="https://www.dataplicity.com>">Dataplicity</a> connection utilizing Bind that monitors the local host.<p>
-       <h3>Tools</h3>                          <ul>
+       <h3>Tools</h3>                       
        <ul>                          
-        <li>Python</li>
-        <li>Threading/li>
-        <li>Time</li>
+        <li>JavaScript</li>
+        <li>Apikeygen</li>
+        <li>Axios</li>
         <li>PostgreSQL</li>
-        <li>JavaScript</>
+        <li>Bluebird</>
         <li>Express</li>
-        <li>Express-Session</li>
+        <li>Body-parser</li>
         <li>HTML</li>
         <li>CSS</li>
         <li>Bootstrap</li>
-        <li>Apicache</li>
+        <li>NodeMailer</li>
         <li>Axios</li>
-        <li>Chart.js</li>
-        <li>HBS</ui>
+        <li>pbkdf2</li>
+        <li>HBS</li>
         <li>PG-Promise</li>
        </ul>
-       <p>On this project I used... <a href="https://sellfy.com/p/8Q9P/jV3VZ/">GitHub</a>. If you'd like a peek under the hood.</p>
+       <p>If you would like a to review the code, <a class="modalA" href="https://github.com/antweer/scorehoard">ScoreHoard on GitHub</a>.</p>
        <ul class="list-inline item-details">
-        <li>Client:
-         <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+        <li>Application:
+         <strong><a class="modalA" href="https://www.scorehoard.com/">ScoreHoard</a></strong>
         </li>
         <li>Date:
-         <strong><a href="http://startbootstrap.com">June 2017</a></strong>
+         <strong><a class="modalA" href="https://www.scorehoard.com/">June 2017</a></strong>
         </li>
-        <li>Service:
-         <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+        <li>Type:
+         <strong><a class="modalA" href="https://www.scorehoard.com/">Team Project</a></strong>
         </li>
        </ul>
       </div>
       <div class="modal-footer">
-       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       <button type="button" class="btn btn-primary">Save changes</button>
+       <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -258,11 +266,11 @@
        <h2>Weather Station</h2>
        <hr class="star-primary">
        <img src="static/img/stationModal.png" class="img-fluid img-centered" alt="">
-       <h3>Application</h3>
+       <br><br><h3>Application</h3>
        <p>This ia a local weather station application that integrates a Raspberry PI with a 
        temperature, humidity and barometric sensor module.
        <h3>How it works</h3>
-       </p><p>The sensor suite is interfaced with Python to monitor the sensors and control a 
+       <p>The sensor suite is interfaced with Python to monitor the sensors and control a 
        8x8 RGB LED matrix display. Python gets a reading every 15 minutes, converts the data from 
        Celsius to Fahrenheit, and then records the data in a PostgreSQL database. Through the LED 
        display, live temperature, humidity and barometric pressure are continually dispalyed.
@@ -271,19 +279,19 @@
        pressure sensor readings.  The second table stores a US Census zip code data base with longitude 
        and latitude coordinates for each zipcode in the United States.</p>
        <p>Using JavaScript on the front end, sensor data and geo cordinates can be accessed and displayed.  
-       The <a href="http://darksky.net">Dark Sky</a> weather API was added to provide US weather information independant 
+       The <a class="modalA" ="http://darksky.net">Dark Sky</a> weather API was added to provide US weather information independant 
        of the local data.  Using the PostgreSQL zip code information cordinates are requested from the Dark Sky API. Zip Code weather 
        can be changed through a user input that stores a cookie locally.</p>
        <p>Local measurments are converted to JSON stringify format so the readings can displayed using Chart.js to see trends and history,
        as well as the data in a table format.<p>
        <p><strong>Weather Station</strong> is a multipage web app that reinforced the skills I learned while attending
-       <a href="http://digitalcrafts.com">DigitalCrafts</a> coding boot camp.<p>
+       <a class="modalA" href="http://digitalcrafts.com">DigitalCrafts</a> coding boot camp.<p>
        <p><strong>Weather Station</strong> application takes advantage of the Raspberry PI hardware to host the web application 
-       locally behind a firewall through a <a href="https://www.dataplicity.com>">Dataplicity</a> connection utilizing Bind that monitors the local host.<p>
+       locally behind a firewall through a <a class="modalA" href="https://www.dataplicity.com>">Dataplicity</a> connection utilizing Bind that monitors the local host.<p>
        <h3>Tools</h3>                          <ul>
        <ul>                          
         <li>Python</li>
-        <li>Threading/li>
+        <li>Threading</li>
         <li>Time</li>
         <li>PostgreSQL</li>
         <li>JavaScript</>
@@ -298,22 +306,21 @@
         <li>HBS</ui>
         <li>PG-Promise</li>
        </ul>
-       <p>On this project I used... <a href="https://sellfy.com/p/8Q9P/jV3VZ/">GitHub</a>. If you'd like a peek under the hood.</p>
+       <p>If you would like a to review the code, <a class="modalA" href="https://github.com/g-grilli/station">Station on GitHub</a>.</p>
        <ul class="list-inline item-details">
-        <li>Client:
-         <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+        <li>Application:
+         <strong><a class="modalA" href="https://www.weather.grilli.tech">Station</a></strong>
         </li>
         <li>Date:
-         <strong><a href="http://startbootstrap.com">August 2017</a></strong>
+         <strong><a class="modalA" href="https://www.weather.grilli.tech">August 2017</a></strong>
         </li>
-        <li>Service:
-         <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+        <li>Type:
+         <strong><a class="modalA" href="https://www.weather.grilli.tech">Individual Project</a></strong>
         </li>
        </ul>
       </div>
       <div class="modal-footer">
-       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       <button type="button" class="btn btn-primary">Save changes</button>
+       <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -330,7 +337,7 @@
       <div class="modal-body">
        <h2>Kidney Track</h2>
        <hr class="star-primary">
-       <img src="static/img/ktracModal.png" class="img-fluid img-centered" alt="">
+       <img src="static/img/ktracModal.png" class="img-fluid img-centered" alt=""><br><br>
        <h3>Problem</h3>
        <p>The first year after a kidney transplant requires a lot of monitoring, 
        changes  and tracking.</p><p>Currently the transplant recipient leaves the hospital 
@@ -358,21 +365,21 @@
         <li>Material-ui</li>
         <li>Moment</li>
        </ul>
-       <p>On this project I used... <a href="https://sellfy.com/p/8Q9P/jV3VZ/">GitHub</a>. If you'd like a peek under the hood.</p>
+       <p>If you would like a to review the code, <a class="modalA" href="https://github.com/g-grilli/kidney_track"></a>.</p>
        <ul class="list-inline item-details">
-        <li>Client:
-         <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+        <li>Application:
+         <strong><a class="modalA" href="https://ktrack.grilli.tech/">K-Track</a></strong>
         </li>
         <li>Date:
-         <strong><a href="http://startbootstrap.com">July 2017</a></strong>
+         <strong><a class="modalA" href="https://ktrack.grilli.tech/">July 2017</a></strong>
         </li>
-        <li>Service:
-         <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+        <li>Type:
+         <strong><a class="modalA" href="https://ktrack.grilli.tech/">Individual Project</a></strong>
         </li>
        </ul>
       </div>
       <div class="modal-footer">
-       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -393,7 +400,7 @@
    </div>
   <div class="footer-col col-md-4">
    <h3>Gene Grilli</h3>
-   <p>A passion forcoding!</p>
+   <p>A passion for coding!</p>
   </div>
  </div>
 </div>
