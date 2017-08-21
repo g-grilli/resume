@@ -18,15 +18,23 @@ p {
 p.small {
   font-size: 16px;
 }
-a,
+.navbar a,
 a:hover,
 a:focus,
 a:active,
 a.active {
   color: white;
+  background-color: #283647;
+}
+.modal-body a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: #283647;
 }
 a:hover {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 h1,
 h2,
