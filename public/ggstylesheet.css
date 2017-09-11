@@ -86,7 +86,9 @@ header {
   text-align: center;
   background: #b12828;
   color: white;
+  padding: 30px;
 }
+
 header .container {
   padding-top: 100px;
   padding-bottom: 50px;
